@@ -9,11 +9,11 @@ def play(n):
         guess = int(input("Guess the Number : "))
 
         if guess < number:
-            print("Your dict too small")
+            print("Your number too small")
             chance -= 1
 
         elif guess > number:
-            print("Your dict too big")
+            print("Your number too big")
             chance -= 1
 
         elif guess == number:
