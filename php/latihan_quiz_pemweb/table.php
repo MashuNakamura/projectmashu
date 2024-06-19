@@ -4,6 +4,7 @@
     </head>
     <body>
         <?php
+        include "connectsql.php";
         session_start();
         if(isset($_SESSION["logged in"])){
             $servername = "localhost";
@@ -13,7 +14,7 @@
             $conn = new mysqli($servername, $usernamedb, $passworddb, $dbname);
 
             if(isset($_POST["add"])){ 
-                echo '<form method="post" action ="table.php">';
+                echo '<form method="post" action ="add-this.php">';
                 echo '<label for="nim">NIM : </label>';
                 echo '<input type="number" name="nim">';
                 echo '<label for="name"> Nama : </label>';
@@ -22,13 +23,6 @@
                 echo '<input type="text" name="alamat">';
                 echo '<input type="submit" name="add-this">';
                 echo '<form>';
-            }
-
-            if(isset($_POST["add-this"])) {
-                $nim = $_POST["nim"];
-                $nama = $_POST["name"];
-                $alamat = $_POST["alamat"];
-                $conn->query("insert into mhs (nim, nama, alamat) values ('$nim', '$nama', '$alamat')");
             }
 
             $result = $conn->query("select * from mhs");
