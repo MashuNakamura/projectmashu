@@ -12,6 +12,7 @@
             $dbname = "dblatihan";
             $conn = new mysqli($servername, $usernamedb, $passworddb, $dbname);
 
+
             if(isset($_POST["add"])){ 
                 echo '<form method="post" action ="add-this.php">';
                 echo '<label for="nim">NIM : </label>';
@@ -25,13 +26,22 @@
                 echo '<input type="submit" name="add-this">';
                 echo '<form>';
             }
+            
+            // Default query
+            $str = "select * from mhs";
 
-            $result = $conn->query("select * from mhs");
+            if(isset($_GET["search"])){
+            $q = $_GET["query"];
+            $str = "select * from mhs where nim like '%$q%' or nama like '%$q%' or tgl_lahir like '%$q%' or alamat like '%$q%'";
+            }
+
+            $result = $conn->query($str);
             foreach ($result as $a) {
                 $nim = $a["nim"];
                 $nama = $a["nama"];
                 $tanggal_lahir = $a["tgl_lahir"];
                 $alamat = $a["alamat"];
+
 
                 if(isset($_POST["delete-$nim"])){
                     $conn->query("delete from mhs where nim = '$nim'"); 
@@ -74,7 +84,7 @@
             echo '</form>';
             echo '</td>';
             echo '</tr>';
-            $result = $conn->query('select * from mhs'); 
+            $result = $conn->query($str); 
             foreach ($result as $a) {
                 $nim = $a['nim'];
                 echo '<tr>';
@@ -92,7 +102,11 @@
             }
             echo '</table>';
             echo "<br>";
-            echo '<form method="post" action="table.php">';
+            echo '<form method="GET" action="table.php">';
+            echo '<textarea name="query" id="searchbox"></textarea>';
+            echo '<input type="submit" value="Search" name="search">';
+            echo "<br>";
+            echo "<br>";
             echo '<input type="submit" value="Logout" name="logout">';
             echo '</center>';
             echo '</form>';
@@ -106,7 +120,6 @@
             session_destroy();
             header("Location: index.php");
         }
-
         ?>
     </body>
 </html>
