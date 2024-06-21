@@ -10,8 +10,9 @@
             if(isset($_POST["add-this"])) {
                 $nim = $_POST["nim"];
                 $nama = $_POST["name"];
+                $tanggal_lahir = $_POST["tanggal_lahir"];
                 $alamat = $_POST["alamat"];
-                $conn->query("insert into mhs (nim, nama, alamat) values ('$nim', '$nama', '$alamat')");
+                $conn->query("insert into mhs (nim, nama, tgl_lahir, alamat) values ('$nim', '$nama', '$tanggal_lahir', '$alamat')");
                 header("Location: table.php");
             }
         }
