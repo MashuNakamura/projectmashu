@@ -9,5 +9,4 @@
 
 ## 12/10/2024
 - Commit repair Display Contact
-- Input the Alpro2 Project (Final Test, First Quiz, Second Quiz)
 - Sort out the Project
