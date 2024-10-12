@@ -31,10 +31,14 @@ while True:
     menu = input("Pilih menu : ")
     if menu == "0":
         break
+    # if menu == "1":
+    #     function.take_name(daftar_kontak)
+    #     menu_kontak = input("Pilih Nama Kontak : ")
+    #     if menu_kontak == "1":
+    #         function.display_kontak(daftar_kontak)
     if menu == "1":
         function.take_name(daftar_kontak)
         menu_kontak = input("Pilih Nama Kontak : ")
-        if menu_kontak == "1":
-            function.display_kontak(daftar_kontak)
+        function.display_kontak(daftar_kontak, int(menu_kontak) - 1)
 
 print("Program telah selesai")
