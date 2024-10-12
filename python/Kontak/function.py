@@ -9,6 +9,5 @@ def take_name(daftar_kontak):
 def display_kontak(daftar_kontak):
     for kontak in daftar_kontak:
         print("============================")
-        print(f"Nama : {kontak['nama']}")
-        print(f"Nama : {kontak['email']}")
-        print(f"Nama : {kontak['telepon']}")
+        for nomor in kontak:
+            print(f"Nama : {kontak[nomor]}")
