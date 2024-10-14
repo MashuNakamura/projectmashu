@@ -19,3 +19,14 @@ def display_kontak(daftar_kontak, index: int):
     print(f"Email   : {selected["email"]}")
     print(f"Telepon : {selected["telepon"]}")
     print("===========================")
+
+def kontak_baru():
+    nama = input("Masukkan Nama : ")
+    email = input("Masukkan Email : ")
+    telepon = input("Masukkan No Telp :")
+    tmp_kontak = {
+        "nama" : nama,
+        "email" : email,
+        "telepon" : telepon
+    }
+    return tmp_kontak
