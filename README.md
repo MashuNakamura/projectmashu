@@ -10,3 +10,6 @@
 ## 12/10/2024
 - Commit repair Display Contact
 - Sort out the Project
+
+## 14/10/2024
+- Example of update dict python
