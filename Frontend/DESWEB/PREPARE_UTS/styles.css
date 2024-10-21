@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: darkgray;
+  color: white;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav-name {
+  margin: 10px;
+  font-family: sans-serif;
+}
+
+.nav-bar {
+  font-size: 30px;
+  font-family: open sans;
+}
+
+.nav-ul {
+  display: flex;
+  color: white;
+}
+
+.nav-li {
+  list-style: none;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.content {
+  background-color: gray;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  height: 80vh;
+}
+
+.gambar {
+  width: 200px;
+  height: 200px;
+}
+
+footer {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  align-items: center;
+  color: white;
+  height: 10vh;
+}
