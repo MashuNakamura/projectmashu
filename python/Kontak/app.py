@@ -25,7 +25,7 @@ while True:
     print("1. Daftar Kontak")
     print("2. Tambah Kontak")
     print("3. Hapus Kontak")
-    print("4. Cari Kontak")
+    print("4. Cari Kontak")    # TODO
     print("0. Keluar")
 
     menu = input("Pilih menu : ")
