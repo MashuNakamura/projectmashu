@@ -40,7 +40,10 @@ while True:
         kontak = function.kontak_baru()
         daftar_kontak.append(kontak)
     
+    # elif menu == "3":
+    #     kontak = function.hapus_kontak(daftar_kontak)
+
     elif menu == "3":
-        kontak = function.hapus_kontak(daftar_kontak)
+        kontak = function.hapus_kontak2(daftar_kontak)
 
 print("Program telah selesai")
