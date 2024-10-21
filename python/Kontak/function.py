@@ -30,3 +30,18 @@ def kontak_baru():
         "telepon" : telepon
     }
     return tmp_kontak
+
+def hapus_kontak(daftar_kontak):
+    telepon = input("No Telepon yang akan dihapus: ")
+    index = -1
+    for i in range(len(daftar_kontak)):
+        kontak = daftar_kontak[i]
+        if telepon == kontak["telepon"]:
+            index = i
+            break
+
+    if index == -1:
+        print("Tidak ditemukan")
+    else:
+        del daftar_kontak[index]
+        print("Berhasil dihapus")
