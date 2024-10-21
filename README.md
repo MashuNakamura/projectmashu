@@ -14,3 +14,6 @@
 ## 14/10/2024
 - Example of update dict python
 - Now the Contact can be Added (But only temp), can be readed only while the program run and the new Contact will be Void again.
+
+## 22/10/2024
+- Contact can be deleted by number and name
