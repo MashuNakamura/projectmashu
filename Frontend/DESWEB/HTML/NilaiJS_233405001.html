@@ -1,0 +1,177 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Nilai JS</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+
+        html {
+            margin-left: 375px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Daftar Nilai UTS Desain Web</h1>
+        <table>
+            <tr style="text-align: center;">
+                <td><b>NIM</b></td>
+                <td><b>Nama Mahasiswa</b></td>
+                <td><b>Nilai UTS</b></td>
+            </tr>
+            <tr>
+                <td>
+                    18810041
+                </td>
+                <td>
+                    VERGILIUS MINGGU
+                </td>
+                <td class="nilai">
+                    88
+                </td>
+            </tr>
+            <tr>
+                <td>18110050</td>
+                <td>CHRIST SEPTIONO</td>
+                <td class="nilai">81</td></tr>
+            <tr>
+                <td>19340002</td>
+                <td>ANISHA DWI NUR FADLILAH</td>
+                <td class="nilai">68</td></tr>
+            <tr>
+                <td>19340018</td>
+                <td>PRIZHELIUS ANZHELMUS BOLI</td>
+                <td class="nilai">70</td></tr>
+            <tr>
+                <td>203400001</td>
+                <td>THOMAS DALTON GREG DAUD</td>
+                <td class="nilai">80</td></tr>
+            <tr>
+                <td>203400002</td>
+                <td>PATRICK STEFANIUZ RAHARJO</td>
+                <td class="nilai">96</td></tr>
+            <tr>
+                <td>203400005</td>
+                <td>ALVIN WIDYADHANA KOSMAN</td>
+                <td class="nilai">83</td></tr>
+            <tr>
+                <td>203400006</td>
+                <td>JONATHAN STEVEN ISKANADAR</td>
+                <td class="nilai">59</td></tr>
+            <tr>
+                <td>203400007</td>
+                <td>ALDRIC NICOLAS SILITONGA</td>
+                <td class="nilai">69</td></tr>
+            <tr>
+                <td>203400008</td>
+                <td>YOHANES CALVIN</td>
+                <td class="nilai">79</td></tr>
+            <tr>
+                <td>203400010</td>
+                <td>ALVINUS YODI</td>
+                <td class="nilai">81</td></tr>
+            <tr>
+                <td>203400011</td>
+                <td>AUSTINUS YOVI SIANG ADI SETIAWAN </td>
+                <td class="nilai">83</td></tr>
+            <tr>
+                <td>203400012</td>
+                <td>YULIUS DANI EKO SAPUTRO</td>
+                <td class="nilai">95</td></tr>
+            <tr>
+                <td>203400013</td>
+                <td>HENDRA</td>
+                <td class="nilai">77</td></tr>
+            <tr>
+                <td>203400014</td>
+                <td>YOHANA CHRISTELA OKTAVIANI</td>
+                <td class="nilai">83</td></tr>
+            <tr>
+                <td>203400016</td>
+                <td>DANDU PANJI PUTRA LAKSONO</td>
+                <td class="nilai">68</td></tr>
+            <tr>
+                <td>203400017</td>
+                <td>WILDWINA</td>
+                <td class="nilai">75</td></tr>
+            <tr>
+                <td>203400018</td>
+                <td>ANGELICHA YUSPITASARI SUWIGNYO</td>
+                <td class="nilai">80</td></tr>
+            <tr>
+                <td>203400019</td>
+                <td>ELISABETH YOLANDA CHRISTIN</td>
+                <td class="nilai">68</td></tr>
+            <tr>
+                <td>203400021</td>
+                <td>LEONARDO DANDY</td>
+                <td class="nilai">71</td></tr>
+            <tr>
+                <td>203400022</td>
+                <td>ANTONIUS GREGORIUS CHRISTIANTO SIAN PRASETYA</td>
+                <td class="nilai">58</td></tr>
+            <tr>
+                <td>203400023</td>
+                <td>FIANINDRA RIEZCA AUGUSTY</td>
+                <td class="nilai">88</td></tr>
+            <tr>
+                <td>203400024</td>
+                <td>NICHOLAS TANAKA</td>
+                <td class="nilai">90</td></tr>
+
+        </table>
+    <label for="mode">Pilih Hitungan</label>
+    <select id="mode" name="mode">
+        <option hidden></option>
+        <option value="Rata-Rata" id="average">Rata-Rata</option>
+        <option value="Nilai-Minimum" id="min">Nilai Minimum</option>
+        <option value="Nilai-Maksimum" id="max">Nilai Maksimum</option>
+    </select>
+    <script>
+        let selectMode = document.getElementById("mode");
+        selectMode.addEventListener("change", function () {
+            let currentValue = selectMode.value;
+            if (currentValue === "Rata-Rata") {
+                let total = 0;
+                let listNilai = document.getElementsByClassName("nilai");
+                for (let i = 0; i < listNilai.length; i++) {
+                    total += parseInt(listNilai[i].textContent);
+                }
+                let average = total / listNilai.length;
+                window.alert(average);
+            }
+            else if (currentValue === "Nilai-Maksimum") {
+                let nilaiMax = 0;
+                let listNilai = document.getElementsByClassName("nilai");
+                for (let i = 0; i < listNilai.length; i++) {
+                    if (parseInt(listNilai[i].textContent) > nilaiMax) {
+                        nilaiMax = parseInt(listNilai[i].textContent); 
+                    }
+                }
+                window.alert(nilaiMax);
+            }
+            else if(currentValue === "Nilai-Minimum") {
+                let nilaiMin = 0;
+                let listNilai = document.getElementsByClassName("nilai");
+                let saveData = [];
+                for (let i = 0; i < listNilai.length; i++){
+                    saveData.push(parseInt(listNilai[i].textContent))
+                }
+                nilaiMin = Math.min(...saveData);
+                window.alert(nilaiMin);
+            }
+        })
+    </script>
+</body>
+
+</html>

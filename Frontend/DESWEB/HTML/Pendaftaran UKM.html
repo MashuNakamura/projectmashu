@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Registrasi UKM UKDC </title>
+    </head>
+    <body>
+        <div style="background-color: gray">
+            <div>
+                <center><h2>FORM REGISTRASI UKM UKDC</h2></center>  
+            </div>
+            <div style="background-color: lightgray">
+        <fieldset>
+            <legend style="text-align: center"> Registrasi UKM UKDC</legend>
+        <form name="registrasi" method="post">
+            <label for="namaLengkap">Nama Lengkap :</label> <br>
+                <input id="namaLengkap" name="namaLengkap" type="text" size="30" placeholder="Nama Lengkap"> <br>
+            <label for="nama">Nama Panggilan :</label> <br>
+                <input id="nama" name="nama" type="text" size="30" placeholder="Nama Panggilan"> <br>
+                <label for="nim">NIM</label> <br>
+                <input id="nim" name="nim" type="text" size="30" placeholder="xxxxxxxxx"> <br> <br>
+            <label for="angkatan">Angkatan :</label>
+                <select id="angkatan" name=angkatan>
+                    <option hidden="pilihtahun">Tahun</option>
+                    <option value="2020.1">2020.1</option>
+                    <option value="2020.2">2020.2</option>
+                    <option value="2020.3">2020.3</option>
+                    <option value="2021.1">2021.1</option>
+                    <option value="2021.2">2021.2</option>
+                    <option value="2021.3">2021.3</option>
+                    <option value="2022.1">2022.1</option>
+                    <option value="2022.2">2022.2</option>
+                    <option value="2022.3">2022.3</option>
+                    <option value="2023.1">2023.1</option>
+                </select>
+            <label for="fakultas">Fakultas :</label>
+                <select id="fakultas" name="fakultas">
+                    <option hidden="pilihfakultas">Fakultas</option>
+                    <option value="hukum">Hukum</option>
+                    <option value="teknik">Teknik</option>
+                    <option value="ekonomi">Ekonomi</option>
+                </select>
+            <label for="prodi">Prodi :</label>
+                <select id="prodi" name="prodi">
+                    <option hidden="pilihprodi">Prodi</option>
+                    <option value="ilmuHukum">Ilmu Hukum</option>
+                    <option value="akupuntur">Akupuntur</option>
+                    <option value="industri">Industri</option>
+                    <option value="arsitektur">Arsitektur</option>
+                    <option value="informatika">Informatika</option>
+                    <option value="manajemen1">Manajemen Pemasaran</option>
+                    <option value="manajemen2">Manajemen Perhotelan</option>
+                    <option value="akuntasi">Akuntasi</option>
+                </select> <br>
+        <label for="gender">Gender :</label> <br>
+                <input type="radio" name="gender" value="laki-laki"> Laki-Laki
+                <input type="radio" name="gender" value="perempuan"> Perempuan <br>
+        <label for="tempatlahir">Tempat Lahir :</label>
+                <input id="tempatlahir" name="tempatlahir" type="text" size="10" placeholder="Surabaya">
+        <label for="tanggallahir">Tanggal Lahir :</label>
+                <input type="date" name="date"> <br>
+        <label for="email">Email :</label> <br>
+                <input id="email" name="email" type="text" size="30" placeholder="example@example.com"> <br>
+        <label for="nomor">No. HP :</label> <br>    
+                <input id="email" name="email" type="text" size="30" placeholder="08xxxxxxxxxx"> <br>
+        <label for="ukm">Pilih UKM yang mau diikuti :</label> <br>
+                <select id="ukm" name="ukm">
+                    <option hidden="pilihukm">Pilih UKM</option>
+                    <option value="basket">Basket</option>
+                    <option value="badminton">Badminton</option>
+                    <option value="uk2mp">UK2MP</option>
+                    <option value="kmk">KMK</option>
+                    <option value="dance">Dance</option>
+                    <option value="jurnalistik">Jurnalistik</option>
+                    <option value="taekwondo">Taekwondo</option>
+                    <option value="musik">Musik</option>
+                    <option value="futsal">Futsal</option>
+                </select> <br>
+                <label for="alasan1">Apa alasanmu mengikuti UKM tersebut?</label> <br>
+                <textarea id="alasan1" name="alasan1" rows="5" cols="50" placeholder="Tuliskan Alasanmu..."></textarea> <br>
+        <label for="panitia">Apakah kamu ingin menjadi Panitia UKM tersebut?</label> <br>
+                <input type="radio" name="panitia" value="ya"> Ya
+                <input type="radio" name="panitia" value="tidak"> Tidak <br>
+        <label for="alasan1">Jika memilih "Ya", Mengapa kamu ingin menjadi Panitia?</label> <br>
+                <textarea id="alasan2" name="alasan1" rows="5" cols="50" placeholder="Tuliskan Alasanmu..."></textarea> <br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+        </div>
+        <div style="background-color: gray">
+            <center><h2>Universitas Katolik Darma Cendika</h2></center>
+        </div>
+    </div>
+    </form>
+    </fieldset> 
+    </body>
+</html>
