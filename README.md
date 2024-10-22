@@ -18,3 +18,4 @@
 ## 22/10/2024
 - Contact can be deleted by number and name
 - Added Old Project (Alpro1, Alpro2, PBD)
+- Added more Old Project (Organisasi Komputer, Design Web, Pemrograman Basis Data, Sistem Operasi)
