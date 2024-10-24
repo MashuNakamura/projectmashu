@@ -25,7 +25,7 @@ while True:
     print("1. Daftar Kontak")
     print("2. Tambah Kontak")
     print("3. Hapus Kontak")
-    print("4. Cari Kontak")    # TODO
+    print("4. Cari Kontak")
     print("0. Keluar")
 
     # Exit from Program
@@ -48,6 +48,7 @@ while True:
     elif menu == "3":
         kontak = function.hapus_kontak(daftar_kontak)
 
+    # Search Contact (but only name) # TODO Search by Number
     elif menu == "4":
         kontak = function.cari_kontak(daftar_kontak)
 

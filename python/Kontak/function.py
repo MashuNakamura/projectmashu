@@ -81,3 +81,14 @@ def hapus_kontak(daftar_kontak):
 #     else:
 #         del daftar_kontak[index] 
 #         print("Berhasil dihapus")
+
+def cari_kontak(daftar_kontak):
+    search = input("Cari kontak dengan nama : ")
+    for kontak in daftar_kontak:
+        nama = kontak["nama"]
+        if nama.find(search) != -1:
+            print("===========================")
+            print(f"Nama    : {kontak["nama"]}")
+            print(f"Email   : {kontak["email"]}")
+            print(f"Telepon : {kontak["telepon"]}")
+            print("===========================")
