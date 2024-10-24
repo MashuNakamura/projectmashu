@@ -48,4 +48,7 @@ while True:
     elif menu == "3":
         kontak = function.hapus_kontak(daftar_kontak)
 
+    elif menu == "4":
+        kontak = function.cari_kontak(daftar_kontak)
+
 print("Program telah selesai")

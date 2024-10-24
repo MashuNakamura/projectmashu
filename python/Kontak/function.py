@@ -52,6 +52,7 @@ def hapus_kontak(daftar_kontak):
 
     if index == -1:
         print("Tidak ditemukan")
+        
     else:
         del daftar_kontak[index]
         print("Berhasil dihapus")
