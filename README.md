@@ -24,3 +24,6 @@
 
 ## 24/10/2024
 - Modify the delete function, so the delete function can delete by number or name of the contact in one function
+
+## 25/10/2024
+- Create an Search function (right now search can only be used by name) TODO -> Search by number too
