@@ -21,3 +21,6 @@
 - Contact can be deleted by number and name
 - Added Old Project (Alpro1, Alpro2, PBD)
 - Added more Old Project (Organisasi Komputer, Design Web, Pemrograman Basis Data, Sistem Operasi)
+
+## 24/10/2024
+- Modify the delete function, so the delete function can delete by number or name of the contact in one function
