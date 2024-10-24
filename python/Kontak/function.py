@@ -31,30 +31,24 @@ def kontak_baru():
     }
     return tmp_kontak
 
-# def hapus_kontak(daftar_kontak):
-#     telepon = input("No Telepon yang akan dihapus: ")
-#     index = -1
-#     for i in range(0, len(daftar_kontak)):
-#         kontak = daftar_kontak[i]
-#         if telepon == kontak["telepon"]:
-#             index = i
-#             break
-
-#     if index == -1:
-#         print("Tidak ditemukan")
-#     else:
-#         del daftar_kontak[index]
-#         print("Berhasil dihapus")
-
-def hapus_kontak2(daftar_kontak):
-    nama = input("Nama Kontak yang ingin dihapus : ").lower()
+def hapus_kontak(daftar_kontak):
     index = -1
-    for i in range(0, len(daftar_kontak)):
-        kontak = daftar_kontak[i]
-        if nama.lower() == kontak["nama"].lower():
-            index = i
-            print(i)
-            break
+    check = int(input("Pilih mode 1. Nomor 2. Nama"))
+    if check == 1:
+        telepon = input("No Telepon yang akan dihapus: ")
+        for i in range(0, len(daftar_kontak)):
+            kontak = daftar_kontak[i]
+            if telepon == kontak["telepon"]:
+                index = i
+                break
+    if check == 2:
+        nama = input("Nama Kontak yang ingin dihapus : ").lower()
+        for i in range(0, len(daftar_kontak)):
+            kontak = daftar_kontak[i]
+            if nama.lower() == kontak["nama"].lower():
+                index = i
+                print(i)
+                break
 
     if index == -1:
         print("Tidak ditemukan")
