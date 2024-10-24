@@ -33,21 +33,21 @@ def kontak_baru():
 
 def hapus_kontak(daftar_kontak):
     index = -1
-    check = int(input("Pilih mode 1. Nomor 2. Nama"))
+    check = int(input("Pilih mode 1. Nomor 2. Nama : "))
     if check == 1:
         telepon = input("No Telepon yang akan dihapus: ")
         for i in range(0, len(daftar_kontak)):
             kontak = daftar_kontak[i]
             if telepon == kontak["telepon"]:
-                index = i
+                index = i 
                 break
+
     if check == 2:
         nama = input("Nama Kontak yang ingin dihapus : ").lower()
         for i in range(0, len(daftar_kontak)):
             kontak = daftar_kontak[i]
             if nama.lower() == kontak["nama"].lower():
                 index = i
-                print(i)
                 break
 
     if index == -1:
@@ -55,3 +55,28 @@ def hapus_kontak(daftar_kontak):
     else:
         del daftar_kontak[index]
         print("Berhasil dihapus")
+
+# def hapus_kontak2(daftar_kontak):
+#     index = -1
+#     check = int(input("Pilih mode 1. Nomor 2. Nama : "))
+#     for i in range(0, len(daftar_kontak)):
+#         kontak = daftar_kontak[i]
+
+#         if check == 1:
+#             telepon = input("No Telepon yang akan dihapus: ")
+#             if telepon == kontak["telepon"]:
+#                 index = i
+#                 break
+
+#         elif check == 2:
+#             nama = input("Nama Kontak yang ingin dihapus : ").lower()
+#             if nama == kontak["nama"].lower():
+#                 index = i 
+#                 break
+    
+#     if index == -1:
+#         print("Tidak ditemukan")
+
+#     else:
+#         del daftar_kontak[index] 
+#         print("Berhasil dihapus")

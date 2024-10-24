@@ -28,21 +28,23 @@ while True:
     print("4. Cari Kontak")    # TODO
     print("0. Keluar")
 
+    # Exit from Program
     menu = input("Pilih menu : ")
     if menu == "0":
         break
+
+    # Display All Contact
     elif menu == "1":
         function.take_name(daftar_kontak)
         menu_kontak = input("Pilih Nama Kontak : ")
         function.display_kontak(daftar_kontak, int(menu_kontak) - 1)
 
+    # Add New Contact (Temporary)
     elif menu == "2":
         kontak = function.kontak_baru()
         daftar_kontak.append(kontak)
-    
-    # elif menu == "3":
-    #     kontak = function.hapus_kontak(daftar_kontak)
 
+    # Delete Contact by Number Telp or Name
     elif menu == "3":
         kontak = function.hapus_kontak(daftar_kontak)
 
