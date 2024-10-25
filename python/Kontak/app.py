@@ -16,11 +16,15 @@ daftar_kontak = [
         "nama": "Badut",
         "email": "anjingkaubadutbeban@gmail.com",
         "telepon": "12121131"
+    },
+    {
+        "nama": "Jefferey",
+        "email": "jeffereymonyet@gmail.com",
+        "telepon": "12345"
     }
 ]
 
 while True:
-
     print("==================")
     print("# Menu")
     print("1. Daftar Kontak")
