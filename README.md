@@ -27,3 +27,7 @@
 
 ## 25/10/2024
 - Create an Search function (right now search can only be used by name) TODO -> Search by number too
+
+## 26/10/2024
+- Now the search can be searched by number
+- Contact is Completed
