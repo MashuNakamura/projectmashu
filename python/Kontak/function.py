@@ -57,38 +57,36 @@ def hapus_kontak(daftar_kontak):
         del daftar_kontak[index]
         print("Berhasil dihapus")
 
-# def hapus_kontak2(daftar_kontak):
-#     index = -1
-#     check = int(input("Pilih mode 1. Nomor 2. Nama : "))
-#     for i in range(0, len(daftar_kontak)):
-#         kontak = daftar_kontak[i]
-
-#         if check == 1:
-#             telepon = input("No Telepon yang akan dihapus: ")
-#             if telepon == kontak["telepon"]:
-#                 index = i
-#                 break
-
-#         elif check == 2:
-#             nama = input("Nama Kontak yang ingin dihapus : ").lower()
-#             if nama == kontak["nama"].lower():
-#                 index = i 
-#                 break
-    
-#     if index == -1:
-#         print("Tidak ditemukan")
-
-#     else:
-#         del daftar_kontak[index] 
-#         print("Berhasil dihapus")
-
 def cari_kontak(daftar_kontak):
-    search = input("Cari kontak dengan nama : ")
-    for kontak in daftar_kontak:
-        nama = kontak["nama"]
-        if nama.find(search) != -1:
-            print("===========================")
-            print(f"Nama    : {kontak["nama"]}")
-            print(f"Email   : {kontak["email"]}")
-            print(f"Telepon : {kontak["telepon"]}")
-            print("===========================")
+    while True:
+        try:
+            print("1. Nama")
+            print("2. Number")
+            check = int(input("Search mode : "))
+            if check == 1:
+                search1 = input("Cari kontak dengan nama : ")
+                for kontak in daftar_kontak:
+                    nama = kontak["nama"].lower()
+                    if nama.find(search1) != -1:
+                        print("===========================")
+                        print(f"Nama    : {kontak["nama"]}")
+                        print(f"Email   : {kontak["email"]}")
+                        print(f"Telepon : {kontak["telepon"]}")
+                        print("===========================")
+                break
+            if check == 2:
+                search2 = input("Cari kontak dengan nomor : ")
+                for kontak in daftar_kontak:
+                    number = kontak["telepon"]
+                    if number.find(search2) != -1:
+                        print("===========================")
+                        print(f"Nama    : {kontak["nama"]}")
+                        print(f"Email   : {kontak["email"]}")
+                        print(f"Telepon : {kontak["telepon"]}")
+                        print("===========================")
+                break
+        except:
+            print("Data harus Integer !")
+            continue
+
+        

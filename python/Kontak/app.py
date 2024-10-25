@@ -21,12 +21,14 @@ daftar_kontak = [
 
 while True:
 
+    print("==================")
     print("# Menu")
     print("1. Daftar Kontak")
     print("2. Tambah Kontak")
     print("3. Hapus Kontak")
     print("4. Cari Kontak")
     print("0. Keluar")
+    print("==================")
 
     # Exit from Program
     menu = input("Pilih menu : ")
@@ -39,7 +41,7 @@ while True:
         menu_kontak = input("Pilih Nama Kontak : ")
         function.display_kontak(daftar_kontak, int(menu_kontak) - 1)
 
-    # Add New Contact (Temporary)
+    # Add New Contact (Temporary) because its only python not using db
     elif menu == "2":
         kontak = function.kontak_baru()
         daftar_kontak.append(kontak)
@@ -48,8 +50,9 @@ while True:
     elif menu == "3":
         kontak = function.hapus_kontak(daftar_kontak)
 
-    # Search Contact (but only name) # TODO Search by Number
+    # Search Contact
     elif menu == "4":
         kontak = function.cari_kontak(daftar_kontak)
 
+# Print apabila program telah selesai
 print("Program telah selesai")
