@@ -31,3 +31,4 @@
 ## 26/10/2024
 - Now the search can be searched by number
 - Contact is Completed
+- Maybe can be add some loop until the input is same as the selection type or (check)
