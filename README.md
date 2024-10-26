@@ -33,3 +33,5 @@
 - Maybe can be add some loop until the input is same as the selection type or (check)
 - Add more Dict (not a db, but only python)
 - More prettier, but if the search contact not get, it still not warn the user
+- Start the react with the example using vite
+- Start the tudulis project using react
