@@ -55,28 +55,44 @@ def cari_kontak(daftar_kontak):
             print("1. Nama")
             print("2. Number")
             check = int(input("Search mode : "))
+            check_boolean = False
+            
             if check == 1:
-                search1 = input("Cari kontak dengan nama : ")
+                search = input("Cari kontak dengan nama : ")
                 for kontak in daftar_kontak:
                     nama = kontak["nama"].lower()
-                    if nama.find(search1) != -1:
+                    if nama.find(search) != -1:
                         print("===========================")
                         print(f"Nama    : {kontak["nama"]}")
                         print(f"Email   : {kontak["email"]}")
                         print(f"Telepon : {kontak["telepon"]}")
+                        check_boolean = True
+                    break
+                if check_boolean == False:
+                    print("===========================")
+                    print("Tidak ditemukan")
+                    print("===========================")
+                    continue
                 break
+
             if check == 2:
-                search2 = input("Cari kontak dengan nomor : ")
+                search = input("Cari kontak dengan nomor : ")
                 for kontak in daftar_kontak:
                     number = kontak["telepon"]
-                    if number.find(search2) != -1:
+                    if number.find(search) != -1:
                         print("===========================")
                         print(f"Nama    : {kontak["nama"]}")
                         print(f"Email   : {kontak["email"]}")
                         print(f"Telepon : {kontak["telepon"]}")
+                        check_boolean = True
+                    break
+                if check_boolean == False:
+                    print("===========================")
+                    print("Tidak ditemukan")
+                    print("===========================")
+                    continue
                 break
         except:
+            print("===========================")
             print("Data harus Integer !")
-            continue
-
-        
+            continue        
