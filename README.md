@@ -35,3 +35,4 @@
 - More prettier, but if the search contact not get, it still not warn the user
 - Start the react with the example using vite
 - Start the tudulis project using react
+- Install the tailwind for design
