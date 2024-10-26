@@ -18,12 +18,11 @@ def display_kontak(daftar_kontak, index: int):
     print(f"Nama    : {selected["nama"]}")
     print(f"Email   : {selected["email"]}")
     print(f"Telepon : {selected["telepon"]}")
-    print("===========================")
 
 def kontak_baru():
     nama = input("Masukkan Nama : ")
     email = input("Masukkan Email : ")
-    telepon = input("Masukkan No Telp :")
+    telepon = input("Masukkan No Telp : ")
     tmp_kontak = {
         "nama" : nama,
         "email" : email,
@@ -33,16 +32,9 @@ def kontak_baru():
 
 def hapus_kontak(daftar_kontak):
     index = -1
-    check = int(input("Pilih mode 1. Nomor 2. Nama : "))
-    if check == 1:
-        telepon = input("No Telepon yang akan dihapus: ")
-        for i in range(0, len(daftar_kontak)):
-            kontak = daftar_kontak[i]
-            if telepon == kontak["telepon"]:
-                index = i 
-                break
+    check = int(input("Pilih mode 1. Nama 2. Number : "))
 
-    if check == 2:
+    if check == 1:
         nama = input("Nama Kontak yang ingin dihapus : ").lower()
         for i in range(0, len(daftar_kontak)):
             kontak = daftar_kontak[i]
@@ -50,11 +42,21 @@ def hapus_kontak(daftar_kontak):
                 index = i
                 break
 
+    if check == 2:
+        telepon = input("No Telepon yang akan dihapus: ")
+        for i in range(0, len(daftar_kontak)):
+            kontak = daftar_kontak[i]
+            if telepon == kontak["telepon"]:
+                index = i 
+                break
+
     if index == -1:
+        print("===========================")
         print("Tidak ditemukan")
         
     else:
         del daftar_kontak[index]
+        print("===========================")
         print("Berhasil dihapus")
 
 def cari_kontak(daftar_kontak):
@@ -72,7 +74,6 @@ def cari_kontak(daftar_kontak):
                         print(f"Nama    : {kontak["nama"]}")
                         print(f"Email   : {kontak["email"]}")
                         print(f"Telepon : {kontak["telepon"]}")
-                        print("===========================")
                 break
             if check == 2:
                 search2 = input("Cari kontak dengan nomor : ")
@@ -83,7 +84,6 @@ def cari_kontak(daftar_kontak):
                         print(f"Nama    : {kontak["nama"]}")
                         print(f"Email   : {kontak["email"]}")
                         print(f"Telepon : {kontak["telepon"]}")
-                        print("===========================")
                 break
         except:
             print("Data harus Integer !")

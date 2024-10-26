@@ -25,14 +25,14 @@ daftar_kontak = [
 ]
 
 while True:
-    print("==================")
+    print("===========================")
     print("# Menu")
     print("1. Daftar Kontak")
     print("2. Tambah Kontak")
     print("3. Hapus Kontak")
     print("4. Cari Kontak")
     print("0. Keluar")
-    print("==================")
+    print("===========================")
 
     # Exit from Program
     menu = input("Pilih menu : ")
@@ -58,5 +58,8 @@ while True:
     elif menu == "4":
         kontak = function.cari_kontak(daftar_kontak)
 
-# Print apabila program telah selesai
+    else:
+        print("Data Harus Integer !")
+
+# Print when the program is done
 print("Program telah selesai")
