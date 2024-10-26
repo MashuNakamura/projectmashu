@@ -25,6 +25,7 @@ daftar_kontak = [
 ]
 
 while True:
+    # Print the menu program of Contact
     print("===========================")
     print("# Menu")
     print("1. Daftar Kontak")
@@ -58,6 +59,7 @@ while True:
     elif menu == "4":
         kontak = function.cari_kontak(daftar_kontak)
 
+    # Display this if the input not listed on the list
     else:
         print("Data Harus Integer !")
 
