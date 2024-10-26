@@ -29,7 +29,7 @@
 - Create an Search function (right now search can only be used by name) TODO -> Search by number too
 
 ## 26/10/2024
-# Python
+### Python
 - Now the search can be searched by number
 - Maybe can be add some loop until the input is same as the selection type or (check)
 - Add more Dict (not a db, but only python)
@@ -37,7 +37,7 @@
 - The Search Function is Completely work
 - Give a little details, and the Contact Python is Done !
 
-# React
+### React
 - Reference : https://www.youtube.com/watch?v=QbmrYAq-YqE&list=PLmF_zPV9ZcP346sttD4Vs2VROLlIp5kPz&index=2
 - Start the react with the example using vite
 - Start the tudulis project using react
