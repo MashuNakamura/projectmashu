@@ -37,8 +37,5 @@
 - The Search Function is Completely work
 - Give a little details, and the Contact Python is Done !
 
-### React
-- Reference : https://www.youtube.com/watch?v=QbmrYAq-YqE&list=PLmF_zPV9ZcP346sttD4Vs2VROLlIp5kPz&index=2
-- Start the react with the example using vite
-- Start the tudulis project using react
-- Install the tailwind for design (already work)
+## 19/03/2025
+- Sort all the necessary project
