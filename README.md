@@ -39,3 +39,7 @@
 
 ## 19/03/2025
 - Sort all the necessary project
+- Add IP and Struktur Data Folder
+
+## 20/03/2025
+- Add PBO Folder
