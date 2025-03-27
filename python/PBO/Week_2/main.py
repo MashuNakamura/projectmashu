@@ -24,11 +24,13 @@ def main():
         elif menu == "0":
             print("Terima Kasih telah menggunakan program ini")
             break
+
         else:
             print("Nomor Menu tidak valid")
+            continue
                 
         Shape.user_input()
-        print(f"Luas : {Shape.hasil_luas()}")
+        print(f"Luas : {Shape.hasil_luas()} !")
         
 if __name__ == "__main__":
     main()
